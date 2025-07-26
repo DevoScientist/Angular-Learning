@@ -1,1 +1,15 @@
 <p>login works!</p>
+
+<h2>Username is : {{displayName}}</h2>
+<input type="text" value="{{name}}"  placeholder="Enter your name!!!" (input)="getName($event)">
+<br><br>
+<button (click)="showName($event)">Get value</button>
+<button (click)="setName()">set value</button>
+
+<hr>
+
+<!--Template refferene variable  (#__typeTheName)-->
+<input type="text" value="{{email}}" placeholder="Enter Yout email" #emailField>
+
+<button (click)="getEmail(emailField.value)">Get email</button>
+<button (click)="setEmail()">Set email</button>
