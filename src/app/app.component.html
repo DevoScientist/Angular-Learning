@@ -6,4 +6,165 @@
 
 <!-- <app-counter></app-counter> -->
 
-<app-login/>
+<!-- <app-login/> -->
+
+<!-- <h1>For loop example in App Component</h1>
+@for(user of users; track user) {
+<h2>{{user}}</h2>
+}
+<hr>
+@for(student of students; track student.name; let id=$index){
+<h2>
+    <span>{{id+1}}</span>
+    <span>{{student.name}}</span>
+    <span>{{student.age}}</span>
+    <span>{{student.email}}</span>
+    <button (click)="getName(student.name)"> Get Name</button>
+</h2>
+} -->
+
+<!-- <h1>Basics Of Signals</h1>
+
+<button (click)="updateValue('dec')" >Decrement</button>
+<h1>{{count()}}</h1>
+<button (click)="updateValue('inc')" >Increment</button> -->
+<!-- 
+<h1>Computed Signals</h1>
+
+<h3>{{count()}}</h3> -->
+
+<!-- <button (click)="userName.set('sam')">Update usernname</button> -->
+
+<!-- <hr>
+<button (click)="toggleValue()">Toggle Heading</button>
+
+@if(displayHeading){
+    <h1 style="background-color: green; text-align: center;">Page Heading</h1>
+} -->
+
+<!-- @for(user of users; track user; let i = $index) { -->
+    <!-- <h4>{{$last}} {{$first}}</h4> -->
+
+    <!-- @if($last){
+        <h3 style="color: red;"> this is our {{i+1}} user and name is {{user}}</h3>
+    }
+    @else if ($first) {
+        <h3 style="color: green;"> this is our {{i+1}} user and name is {{user}}</h3>
+    }
+    @else {
+        <h3 style="color: black;"> this is our {{i+1}} user and name is {{user}}</h3>
+    }
+   <h1>{{$count}}</h1>
+}
+@empty {
+    <h1>
+        No record found!!!
+    </h1>
+} -->
+
+<!-- <h1>Two Way Binding!!!</h1> -->
+
+<!-- <input type="text" [(ngModel)]="name" placeholder="enter name">
+ <h1>{{name}}</h1> -->
+
+ <!-- <input type="text" (input)="updateName($event)" placeholder="enter name">
+ <h1>{{name}}</h1> -->
+
+
+<!-- <h1>To-Do list</h1>
+
+<input type="text" [(ngModel)]="task" placeholder="enter new task">
+<button (click)="addTask()">Add task</button>
+
+
+@for(task of taskList; track task; let i = $index) { -->
+    <!-- <h4>{{$last}} {{$first}}</h4> -->
+
+    <!-- <h1>{{task.id}} {{task.taskName}}</h1> -->
+
+    <!-- <ul class="task-list">
+        <li>{{task.id}}</li>
+        <li>{{task.taskName}}</li>
+        <li><button (click)="deleteTask(task.id)">delete</button></li>
+    </ul>
+}
+@empty {
+    <h1>
+        No To-Do's found!!!
+    </h1>
+} -->
+
+<!-- <h1
+[style.backgroundColor]="bgColor"
+[style.fontSize.pt]="fontSize"
+>Dynamic Style</h1>
+
+<h1 [style.fontSize]="zoom? headingSizeBig: headingSizeSmall" >Heading </h1>
+<button (click)="updateHeadingSize()">Toggle Font</button> -->
+
+
+<!-- <h1>Structural Directive</h1>
+
+<h2 *ngIf = "show">Heading showing </h2> <button (click)="showToggle()">Toggle</button> -->
+
+
+<!-- <h1>*ngFor Directives in Angular</h1> -->
+<!-- <ul>
+    <li *ngFor="let student of students">
+
+        {{student}}
+
+    </li>
+</ul> -->
+
+<!-- <ul>
+    <li *ngFor="let student of studentData">
+        {{student.name}}, {{student.age}}, {{student.email}}
+    </li>
+</ul> -->
+
+
+<!-- <h1>*ngIf Directives in Angular</h1>
+
+
+<button (click)="authControll()">
+    <div *ngIf="login else elseBlock">
+        <a href="/">logout</a>
+    </div>
+    <ng-template #elseBlock>
+        <a href="/">login</a>
+    </ng-template>
+</button>
+
+
+<div *ngIf="block == 0">
+    <h1>Heading 0</h1>
+</div>
+<div *ngIf="block == 1">
+    <h1>Heading 1</h1>
+</div>
+<div *ngIf="block == 2">
+    <h1>Heading 2</h1>
+</div>
+<div *ngIf="block == 3">
+    <h1>Heading 3</h1>
+</div>
+
+<button (click)="onClick()">click me</button> -->
+
+<h1>*ngSwitch Directives in Angular</h1>
+<button (click)="changeColor('red')">Red</button>
+<button (click)="changeColor('green')">Green</button>
+<button (click)="changeColor('yellow')">Yellow</button>
+<button (click)="changeColor('blue')">Blue</button>
+<button (click)="changeColor('pink')">Pink</button>
+
+
+<div [ngSwitch]="colour">
+<h1 *ngSwitchCase="'red'" style="background-color: red;" >Red Color</h1>
+<h1 *ngSwitchCase="'green'" style="background-color: green;" >Green Color</h1>
+<h1 *ngSwitchCase="'yellow'" style="background-color: yellow;" >Yellow Color</h1>
+<h1 *ngSwitchCase="'blue'" style="background-color: Blue;" >Blue Color</h1>
+<h1 *ngSwitchCase="'pink'" style="background-color: pink;" >Pink Color</h1>
+<h1 *ngSwitchDefault >No Color Match|</h1>
+</div>
